@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 class Matakuliah extends CI_Controller
 {
@@ -29,3 +30,23 @@ class Matakuliah extends CI_Controller
         }
     }
 } 
+=======
+<?php
+class Matakuliah extends CI_Controller
+{
+    public function index()
+    {
+        $this->load->view('view-form-matakuliah');
+
+    }
+    public function cetak()
+    {
+        $data=[
+            'kode' => $this->input->post('kode'),
+            'nama' => $this->input->post('nama'),
+            'sks' => $this->input->post('sks')
+        ];
+        $this->load->view('view-form-matakuliah',$data);
+    }
+}
+>>>>>>> 1dd44a96e64c9327c4ac01507c1b2f866a272780
